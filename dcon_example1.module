@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * File that contains the code for the module DCon Example 1.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function dcon_example1_menu() {
+  $items['example-1'] = array(
+    'title' => 'Example number 1',
+    'page callback' => 'dcon_example1_show_message',
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+
+/**
+ * Callback function to show a message.
+ */
+function dcon_example1_show_message() {
+  return '<h2>Hola mundo</h2>';
+}

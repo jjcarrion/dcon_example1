@@ -1,0 +1,4 @@
+name = DrupalCon Example 1
+description = Example module number 1
+core = 7.x
+package = DrupalCon
