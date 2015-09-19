@@ -11,9 +11,9 @@ function dcon_example1_menu() {
   $items['example-1'] = array(
     'title' => 'Example number 1',
     'page callback' => 'dcon_example1_show_message',
-    'access callback' => TRUE,
     'type' => MENU_NORMAL_ITEM,
     'menu_name' => 'main-menu',
+    'access arguments' => array('access hello world'),
   );
   return $items;
 }
@@ -42,6 +42,17 @@ function dcon_example1_theme($existing, $type, $theme, $path) {
         'message' => NULL,
       ),
       'template' => 'templates/dcon-example1-show-message',
+    ),
+  );
+}
+
+/**
+ * Implements hook_permission().
+ */
+function dcon_example1_permission() {
+  return array(
+    'access hello world' => array(
+      'title' => t('Access to the Hello World page'),
     ),
   );
 }
