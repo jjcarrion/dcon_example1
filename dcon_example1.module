@@ -12,6 +12,8 @@ function dcon_example1_menu() {
     'title' => 'Example number 1',
     'page callback' => 'dcon_example1_show_message',
     'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'main-menu',
   );
   return $items;
 }
